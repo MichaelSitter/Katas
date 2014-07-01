@@ -23,4 +23,12 @@ describe('gameSpec', function () {
 			expect(game(s)).toEqual([[0,0]]);
 		});
 	});
+
+	describe('Given 2 x 2 with 3 live cells', function () {
+
+		var s = [[1,1],[1,0]];
+		it('Should result in 1 live cell', function () {
+			expect(game(s)).toEqual([[0,0],[0,1]]);
+		});
+	});
 });

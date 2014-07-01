@@ -5,7 +5,6 @@ describe('calcSpec', function () {
 		calc = new Calculator();
 
 		describe('Given I', function () {
-
 			it('Should return 1', function () {
 				expect(calc.convert('I')).toBe(1);
 			});
@@ -44,6 +43,12 @@ describe('calcSpec', function () {
 		describe('Given VI', function () {
 			it('Should return 6', function () {
 				expect(calc.convert('VI')).toBe(6);
+			});
+		});
+
+		describe('Given IV', function () {
+			it('Should return 4', function () {
+				expect(calc.convert('IV')).toBe(4);
 			});
 		});
 	});

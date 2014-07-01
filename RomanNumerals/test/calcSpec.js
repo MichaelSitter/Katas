@@ -28,5 +28,11 @@ describe('calcSpec', function () {
 				expect(calc.convert('X')).toBe(10);
 			});
 		});
+
+		describe('Given II', function () {
+			it('Should return 2', function () {
+				expect(calc.convert('II')).toBe(2);
+			});
+		});
 	});
 });

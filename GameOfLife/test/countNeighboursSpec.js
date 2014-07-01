@@ -46,15 +46,30 @@ describe('countNeighboursSpec', function() {
 			world = [[0]];
 		});
 
-		describe('And given checking cell in bounds', function () {
+		describe('And given checking cell with no in bound neighbours', function () {
 			beforeEach(function () { x = 0, y = 0; });
 
-			// Cells outside the world are dead 
 			it('Should have no neighbours', function () {
 				expect(countNeighbours(world, x, y)).toEqual(0);
 			});
 		});
 	});
 
+	describe('Given 2 x 2 world with some live cells', function () {
 
+		beforeEach(function () {
+			world = [
+				[0,0],
+				[1,1]
+			];
+		});
+
+		describe('And given checking cell with live neighbours and out of bounds neighbours', function () {
+			beforeEach(function () { x = 0, y = 0; });
+
+			it('Should could live neighbours', function () {
+				expect(countNeighbours(world, x, y)).toEqual(2);
+			});
+		});
+	});
 });

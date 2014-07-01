@@ -12,10 +12,22 @@ function Calculator(){
 
 	this.convert = function (input) {
 
-		var total = 0;
+		var total = 0,
+			curr,
+			next;
+
 		for (var i = 0; i < input.length; i++) {
-			total += getValue(input[i]);
+
+			curr = getValue(input[i]);
+			next = getValue(input[i + 1]);
+
+			if (next > curr) {
+				curr = curr * -1;
+			}
+
+			total += curr;
 		};
+
 		return total;
 	}
 };

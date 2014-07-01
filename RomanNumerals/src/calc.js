@@ -10,6 +10,14 @@ function Calculator(){
 		return 1;
 	};
 
+	var values = {
+		I: 1,
+		V: 5,
+		X: 10,
+		L: 50,
+		C: 100
+	}
+
 	this.convert = function (input) {
 
 		var total = 0,
@@ -18,8 +26,8 @@ function Calculator(){
 
 		for (var i = 0; i < input.length; i++) {
 
-			curr = getValue(input[i]);
-			next = getValue(input[i + 1]);
+			curr = values[input[i]];
+			next = values[input[i + 1]];
 
 			if (next > curr) {
 				curr = curr * -1;

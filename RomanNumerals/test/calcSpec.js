@@ -57,5 +57,17 @@ describe('calcSpec', function () {
 				expect(calc.convert('VII')).toBe(7);
 			});
 		});
+
+		describe('Given LXIII', function () {
+			it('Should return 63', function () {
+				expect(calc.convert('LXIII')).toBe(63);
+			});
+		});
+
+		describe('Given XCV', function () {
+			it('Should return 95', function () {
+				expect(calc.convert('XCV')).toBe(95);
+			});
+		});
 	});
 });

@@ -40,5 +40,11 @@ describe('calcSpec', function () {
 				expect(calc.convert('III')).toBe(3);
 			});
 		});
+
+		describe('Given VI', function () {
+			it('Should return 6', function () {
+				expect(calc.convert('VI')).toBe(6);
+			});
+		});
 	});
 });
